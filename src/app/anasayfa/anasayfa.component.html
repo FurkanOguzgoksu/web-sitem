@@ -1,0 +1,89 @@
+<!-- anasayfa.component.html -->
+
+<div class="header">
+  <div class="header-left">
+    <h1>Furkan Oğuzgöksu</h1>
+  </div>
+  <div class="header-right">
+    <input type="text" class="search-bar" placeholder="Haber ara..." />
+  </div>
+</div>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="/home" [class.active]="isActive('home')">Anasayfa</a></li>
+    <li>
+      <a href="/kategori" [class.active]="isActive('kategori')">Kategori</a>
+    </li>
+    <li>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a routerLink="/kategori/business" routerLinkActive="active"
+              >Business</a
+            >
+          </li>
+          <li>
+            <a routerLink="/kategori/entertainment" routerLinkActive="active"
+              >Entertainment</a
+            >
+          </li>
+
+          <li>
+            <a routerLink="/kategori/general" routerLinkActive="active"
+              >General</a
+            >
+          </li>
+          <li>
+            <a routerLink="/kategori/health" routerLinkActive="active"
+              >Health</a
+            >
+          </li>
+          <li>
+            <a routerLink="/kategori/science" routerLinkActive="active"
+              >Science</a
+            >
+          </li>
+          <li>
+            <a routerLink="/kategori/sports" routerLinkActive="active"
+              >Sports</a
+            >
+          </li>
+          <li>
+            <a routerLink="/kategori/technology" routerLinkActive="active"
+              >Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </li>
+    <li>
+      <a routerLink="/hakkimda" routerLinkActive="active">Hakkımda</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="content">
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slider-item" *ngFor="let news of topNews">
+      <h2>{{ news.title }}</h2>
+      <img [src]="news.imageUrl" alt="News Image" />
+    </div>
+  </div>
+
+  <!-- Haberler Listesi -->
+  <div class="news-list">
+    <div class="news-item" *ngFor="let news of remainingNews">
+      <h3>{{ news.title }}</h3>
+      <p>{{ news.description }}</p>
+      <a [href]="news.url" target="_blank">Devamını oku</a>
+    </div>
+  </div>
+
+  <!-- Sayfalama -->
+  <div class="pagination">
+    <button (click)="previousPage()">Önceki</button>
+    <button (click)="nextPage()">Sonraki</button>
+  </div>
+</div>

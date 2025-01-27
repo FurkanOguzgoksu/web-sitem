@@ -1,0 +1,57 @@
+<!-- header.component.html -->
+
+<header class="header">
+  <div class="header-top">
+    <div class="header-left">
+      <h1>Furkan Oğuzgöksu</h1>
+    </div>
+    <div class="header-right">
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="Haber ara..."
+        [(ngModel)]="searchQuery"
+        (keyup.enter)="search()"
+      />
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">Anasayfa</a>
+      </li>
+      <li>
+        <a routerLink="/kategori/business" routerLinkActive="active"
+          >Business</a
+        >
+      </li>
+      <li>
+        <a routerLink="/kategori/entertainment" routerLinkActive="active"
+          >Entertainment</a
+        >
+      </li>
+
+      <li>
+        <a routerLink="/kategori/general" routerLinkActive="active">General</a>
+      </li>
+      <li>
+        <a routerLink="/kategori/health" routerLinkActive="active">Health</a>
+      </li>
+      <li>
+        <a routerLink="/kategori/science" routerLinkActive="active">Science</a>
+      </li>
+      <li>
+        <a routerLink="/kategori/sports" routerLinkActive="active">Sports</a>
+      </li>
+      <li>
+        <a routerLink="/kategori/technology" routerLinkActive="active"
+          >Technology</a
+        >
+      </li>
+      <li>
+        <a routerLink="/hakkimda" routerLinkActive="active">Hakkımda</a>
+      </li>
+    </ul>
+  </nav>
+</header>

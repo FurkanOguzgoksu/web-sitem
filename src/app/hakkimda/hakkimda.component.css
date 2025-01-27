@@ -1,0 +1,79 @@
+/* hakkimda.component.css */
+
+.hakkimda-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.personal-info {
+  max-width: 600px;
+}
+
+.personal-info h2 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.projects,
+.skills,
+.contact {
+  margin-bottom: 30px;
+}
+
+.projects h2,
+.skills h2,
+.contact h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.projects ul,
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects li,
+.skills li {
+  margin-bottom: 10px;
+}
+
+.projects h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}

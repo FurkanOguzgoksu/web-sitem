@@ -1,0 +1,23 @@
+<!-- search.component.html -->
+
+<div class="search-page-container">
+  <div class="search-header">
+    <h2>Arama Sonuçları: "{{ searchQuery }}"</h2>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    <p>Sonuçlar yükleniyor...</p>
+  </div>
+
+  <div *ngIf="!loading && news.length === 0" class="no-results">
+    <p>Hiç sonuç bulunamadı.</p>
+  </div>
+
+  <div *ngIf="!loading && news.length > 0" class="news-list">
+    <div *ngFor="let article of news" class="news-item">
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.description }}</p>
+      <a [href]="article.url" target="_blank">Haberi Görüntüle</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+/* kategori.component.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-right .search-bar {
+  padding: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.navbar {
+  background-color: #444;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar a.active {
+  color: #ff9900;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+}
+
+.filter-section {
+  width: 25%;
+  margin-right: 20px;
+}
+
+.filter-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section label {
+  margin-top: 10px;
+}
+
+.news-list {
+  width: 75%;
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.news-item h3 {
+  margin-top: 0;
+}
+
+.news-item a {
+  color: #007bff;
+  text-decoration: none;
+}

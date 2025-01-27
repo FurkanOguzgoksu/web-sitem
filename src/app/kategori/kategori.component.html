@@ -1,0 +1,71 @@
+<!-- kategori.component.html -->
+
+<div class="header">
+  <div class="header-left">
+    <h1>Adınız Soyadınız</h1>
+  </div>
+  <div class="header-right">
+    <input type="text" class="search-bar" placeholder="Haber ara..." />
+  </div>
+</div>
+
+<nav class="navbar">
+  <ul>
+    <li>
+      <a routerLink="/kategori/business" routerLinkActive="active">Business</a>
+    </li>
+    <li>
+      <a routerLink="/kategori/entertainment" routerLinkActive="active"
+        >Entertainment</a
+      >
+    </li>
+    <li>
+      <a routerLink="/kategori/general" routerLinkActive="active">General</a>
+    </li>
+    <li>
+      <a routerLink="/kategori/health" routerLinkActive="active">Health</a>
+    </li>
+    <li>
+      <a routerLink="/kategori/science" routerLinkActive="active">Science</a>
+    </li>
+    <li>
+      <a routerLink="/kategori/sports" routerLinkActive="active">Sports</a>
+    </li>
+    <li>
+      <a routerLink="/kategori/technology" routerLinkActive="active"
+        >Technology</a
+      >
+    </li>
+    <!-- Diğer kategoriler -->
+  </ul>
+</nav>
+
+<div class="content">
+  <!-- Filtreleme Paneli -->
+  <div class="filter-section">
+    <h3>Filtrele</h3>
+    <form>
+      <label for="date">Tarih:</label>
+      <input type="date" id="date" name="date" />
+
+      <label for="category">Kategori:</label>
+      <select id="category" name="category">
+        <option value="business">İş Dünyası</option>
+        <option value="technology">Teknoloji</option>
+        <option value="health">Sağlık</option>
+        <!-- Diğer kategoriler -->
+      </select>
+
+      <button type="submit">Filtrele</button>
+    </form>
+  </div>
+
+  <!-- Haberler Listesi -->
+  <div class="news-list">
+    <div class="news-item" *ngFor="let news of categoryNews">
+      <h3>{{ news.title }}</h3>
+      <p>{{ news.description }}</p>
+      <a [href]="news.url" target="_blank">Devamını oku</a>
+    </div>
+  </div>
+</div>
